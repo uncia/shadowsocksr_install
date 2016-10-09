@@ -22,8 +22,8 @@ Server Port:your_server_port
 Password:your_password
 Local IP:127.0.0.1
 Local Port:1080
-Protocol:origin
-obfs:plain
+Protocol:auth_sha1_v2_compatible
+obfs:http_simple_compatible
 Encryption Method:aes-256-cfb
 
 Welcome to visit:https://shadowsocks.be/9.html
