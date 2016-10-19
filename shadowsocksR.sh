@@ -256,18 +256,18 @@ config_shadowsocks(){
     "local_address":"127.0.0.1",
     "local_port":1080,
     "port_password":{
-        "${shadowsocksport}":"${shadowsockspwd}",
-        "25":{"protocol":"auth_sha1_v4", "password":"3XWswUhRJL52InvP", "obfs":"tls1.2_ticket_auth", "obfs_param":""}
+    "${shadowsocksport}":"${shadowsockspwd}",
+    "25":{"protocol":"auth_sha1_v4", "password":"3XWswUhRJL52InvP", "obfs":"tls1.2_ticket_auth", "obfs_param":""}
     },
     "timeout":120,
-	"udp_timeout": 60,
+    "udp_timeout": 60,
     "method":"aes-256-cfb",
     "protocol":"auth_sha1_v2_compatible",
     "protocol_param":"",
     "obfs":"http_simple_compatible",
     "obfs_param":"",
     "dns_ipv6":false,
-	"connect_verbose_info": 0,
+    "connect_verbose_info": 0,
     "redirect":"",
     "fast_open":false,
     "workers": 1
