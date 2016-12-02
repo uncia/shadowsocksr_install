@@ -137,6 +137,7 @@ https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup
 参考链接：
 https://github.com/breakwa11/shadowsocks-rss/wiki/ulimit
 ##锐速优化
+```
 vi /serverspeeder/etc/config
 把rsc="0"改成rsc="1"，切换新网卡驱动
 修改gso="0"改成gso="1"
@@ -158,6 +159,5 @@ maxmode="1"  （最大传输模式；设为 1 表示开启；设为 0 表示关�
 /serverspeeder/bin/serverSpeeder.sh stop
 启动命令
 /serverspeeder/bin/serverSpeeder.sh start
-方便对比测试效果
-
+方便对比测试效果```
 Copyright (C) 2014-2999
