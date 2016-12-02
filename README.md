@@ -136,5 +136,28 @@ https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup
 
 参考链接：
 https://github.com/breakwa11/shadowsocks-rss/wiki/ulimit
+##锐速优化
+vi /serverspeeder/etc/config
+把rsc="0"改成rsc="1"，切换新网卡驱动
+修改gso="0"改成gso="1"
+推荐修改的内容为：
+advinacc="1"  （高级入向加速开关；设为 1 表示开启，设为 0 表示关闭；开启此功能可以得到更
+好的流入方向流量加速效果）
+maxmode="1"  （最大传输模式；设为 1 表示开启；设为 0 表示关闭；开启后会进一步提高加速效
+果，但是可能会降低有效数据率）"如果测试无效果请不要开启此功能"
+其它设置，如果不能直接操作到总服务器的话，不推荐修改，保留默认即可。
+按下esc退出编辑
+输入:wq保存退出
+最后输入下面命令，重启软件即可。
+/serverspeeder/bin/serverSpeeder.sh restart
+注：如果提示内存不足无法启动的话，请释放点内存后在执行启动。
+或者设置engineNum="1"（只启用1个加速引擎“单核心才能更稳定”，默认CPU多少线程就启用多少个）
+卸载方法：/serverspeeder/bin/serverSpeeder.sh uninstall
+以上注意区分大小写，否则提示找不到文件
+停止命令
+/serverspeeder/bin/serverSpeeder.sh stop
+启动命令
+/serverspeeder/bin/serverSpeeder.sh start
+方便对比测试效果
 
 Copyright (C) 2014-2999
