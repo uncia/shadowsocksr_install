@@ -19,6 +19,7 @@ chmod +x shadowsocksR.sh
 wget --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh
 chmod +x shadowsocksR.sh
 ./shadowsocksR.sh
+rm -rf shadowsocksR.sh
 ```
 再或者
 ```
