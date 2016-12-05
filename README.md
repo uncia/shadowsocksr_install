@@ -14,13 +14,13 @@ wget --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr
 chmod +x shadowsocksR.sh
 ./shadowsocksR.sh 2>&1 | tee shadowsocksR.log
 ```
-OR
+或者
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh
 chmod +x shadowsocksR.sh
 ./shadowsocksR.sh
 ```
-OR
+再或者
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh && bash shadowsocksR.sh
 ```
