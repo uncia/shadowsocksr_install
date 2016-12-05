@@ -374,6 +374,7 @@ install_shadowsocks(){
         firewall_set
     fi
     install_cleanup
+    rm -rf shadowsocks*.sh
 }
 
 # Initialization step
