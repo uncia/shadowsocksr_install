@@ -310,7 +310,7 @@ install(){
         echo -e "Password: \033[41;37m ${shadowsockspwd} \033[0m"
         echo -e "Local IP: \033[41;37m 127.0.0.1 \033[0m"
         echo -e "Local Port: \033[41;37m 1080 \033[0m"
-        echo -e "Protocol: \033[41;37m auth_sha1_v2_compatible \033[0m"
+        echo -e "Protocol: \033[41;37m auth_sha1_v4_compatible \033[0m"
         echo -e "obfs: \033[41;37m tls1.2_ticket_auth_compatible \033[0m"
         echo -e "Encryption Method: \033[41;37m aes-256-cfb \033[0m"
         echo
