@@ -49,22 +49,22 @@ check_sys(){
     if [[ -f /etc/redhat-release ]]; then
         release="centos"
         systemPackage="yum"
-    elif cat /etc/issue | grep -q -E -i "debian"; then
+    elif cat /etc/issue | grep -Eqi "debian"; then
         release="debian"
         systemPackage="apt"
-    elif cat /etc/issue | grep -q -E -i "ubuntu"; then
+    elif cat /etc/issue | grep -Eqi "ubuntu"; then
         release="ubuntu"
         systemPackage="apt"
-    elif cat /etc/issue | grep -q -E -i "centos|red hat|redhat"; then
+    elif cat /etc/issue | grep -Eqi "centos|red hat|redhat"; then
         release="centos"
         systemPackage="yum"
-    elif cat /proc/version | grep -q -E -i "debian"; then
+    elif cat /proc/version | grep -Eqi "debian"; then
         release="debian"
         systemPackage="apt"
-    elif cat /proc/version | grep -q -E -i "ubuntu"; then
+    elif cat /proc/version | grep -Eqi "ubuntu"; then
         release="ubuntu"
         systemPackage="apt"
-    elif cat /proc/version | grep -q -E -i "centos|red hat|redhat"; then
+    elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
         release="centos"
         systemPackage="yum"
     fi
@@ -276,7 +276,7 @@ config_shadowsocks(){
     "timeout":120,
     "udp_timeout": 60,
     "method":"aes-256-cfb",
-    "protocol":"auth_sha1_v4_compatible",
+    "protocol":"auth_sha1_v2_compatible",
     "protocol_param":"",
     "obfs":"tls1.2_ticket_auth_compatible",
     "obfs_param":"",
@@ -284,7 +284,6 @@ config_shadowsocks(){
     "connect_verbose_info": 0,
     "redirect":"",
     "fast_open":false,
-    "workers": 1
 }
 EOF
 }
