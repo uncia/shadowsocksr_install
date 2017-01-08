@@ -262,7 +262,7 @@ config_shadowsocks(){
     "timeout":120,
     "udp_timeout": 60,
     "method":"aes-256-cfb",
-    "protocol":"auth_sha1_v4_compatible",
+    "protocol":"auth_aes128_md5_compatible",
     "protocol_param":"",
     "obfs":"tls1.2_ticket_auth_compatible",
     "obfs_param":"",
