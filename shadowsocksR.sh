@@ -266,11 +266,14 @@ config_shadowsocks(){
     "protocol_param":"",
     "obfs":"tls1.2_ticket_auth_compatible",
     "obfs_param":"",
+    "speed_limit_per_con": 0,
+    "speed_limit_per_user": 0,
+
+    "additional_ports" : {}, // only works under multi-user mode
     "dns_ipv6":false,
     "connect_verbose_info": 0,
     "redirect":"",
-    "fast_open":false,
-    "workers": 1
+    "fast_open":false
 }
 EOF
 }
