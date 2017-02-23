@@ -384,6 +384,6 @@ case "$action" in
     ;;
     *)
     echo "Arguments error! [${action}]"
-    echo "Usage: `basename $0` {install|uninstall}"
+    echo "Usage: `basename $0` [install|uninstall]"
     ;;
 esac
