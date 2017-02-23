@@ -290,7 +290,7 @@ install(){
     # Install ShadowsocksR
     cd ${cur_dir}
     unzip -q manyuser.zip
-    mv shadowsocks-manyuser/shadowsocks /usr/local/
+    mv shadowsocksr-manyuser/shadowsocks /usr/local/
     if [ -f /usr/local/shadowsocks/server.py ]; then
         chmod +x /etc/init.d/shadowsocks
         if check_sys packageManager yum; then
@@ -329,7 +329,7 @@ install(){
 # Install cleanup
 install_cleanup(){
     cd ${cur_dir}
-    rm -rf manyuser.zip shadowsocks-manyuser libsodium-1.0.11.tar.gz libsodium-1.0.11
+    rm -rf manyuser.zip shadowsocksr-manyuser libsodium-1.0.11.tar.gz libsodium-1.0.11
 }
 
 
