@@ -257,11 +257,11 @@ config_shadowsocks(){
     "local_port":1080,
     "port_password":{
         "${shadowsocksport}":"${shadowsockspwd}",
-        "25":{"protocol":"auth_aes128_sha1_compatible", "password":"3XWswUhRJL52InvP", "obfs":"tls1.2_ticket_auth_compatible", "obfs_param":""}
+        "25":"password":"T&WtYA6Bg0kjcHnb%K"
     },
     "timeout":120,
     "udp_timeout": 60,
-    "method":"aes-256-cfb",
+    "method":"aes-128-ctr",
     "protocol":"auth_aes128_md5_compatible",
     "protocol_param":"",
     "obfs":"tls1.2_ticket_auth_compatible",
