@@ -270,6 +270,7 @@ config_shadowsocks(){
     "connect_verbose_info": 0,
     "redirect":"",
     "fast_open":false,
+    "workers": 1
 }
 EOF
 }
