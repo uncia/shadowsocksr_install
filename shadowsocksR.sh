@@ -257,7 +257,7 @@ config_shadowsocks(){
     "local_port":1080,
     "port_password":{
         "${shadowsocksport}":"${shadowsockspwd}",
-        "25":"password":"T&WtYA6Bg0kjcHnb%K"
+        "25":"T&WtYA6Bg0kjcHnb%K"
     },
     "timeout":120,
     "udp_timeout": 60,
