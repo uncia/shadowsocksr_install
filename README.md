@@ -33,7 +33,7 @@ Server Port:your_server_port
 Password:your_password
 Local IP:127.0.0.1
 Local Port:1080
-Protocol:auth_sha1_v2_compatible
+Protocol:auth_sha1_v4_compatible
 obfs:http_simple_compatible
 Encryption Method:aes-256-cfb
 
