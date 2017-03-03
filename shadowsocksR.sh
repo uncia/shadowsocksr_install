@@ -261,8 +261,8 @@ config_shadowsocks(){
     },
     "timeout":120,
     "udp_timeout": 60,
-    "method":"aes-128-ctr",
-    "protocol":"auth_aes128_md5_compatible",
+    "method":"aes-256-cfb",
+    "protocol":"auth_sha1_v4_compatible",
     "protocol_param":"",
     "obfs":"tls1.2_ticket_auth_compatible",
     "obfs_param":"",
@@ -313,9 +313,9 @@ install(){
         echo -e "Password: \033[41;37m ${shadowsockspwd} \033[0m"
         echo -e "Local IP: \033[41;37m 127.0.0.1 \033[0m"
         echo -e "Local Port: \033[41;37m 1080 \033[0m"
-        echo -e "Protocol: \033[41;37m auth_aes128_md5_compatible \033[0m"
+        echo -e "Protocol: \033[41;37m auth_sha1_v4_compatible \033[0m"
         echo -e "obfs: \033[41;37m tls1.2_ticket_auth_compatible \033[0m"
-        echo -e "Encryption Method: \033[41;37m aes-128-ctr \033[0m"
+        echo -e "Encryption Method: \033[41;37m aes-256-cfb \033[0m"
         echo
         echo "Welcome to visit:https://github.com/uncia/shadowsocksr_install"
         echo "If you want to change protocol & obfs, please visit reference URL:"
