@@ -120,6 +120,11 @@ Enjoy it!
     "fast_open": false,
     "workers": 1
 }
+
+"port_password":{
+    "${shadowsocksport}":"${shadowsockspwd}",
+    "25":{"protocol":"auth_aes128_sha1_compatible", "password":"3XWswUhRJL52InvP", "obfs":"tls1.2_ticket_auth_compatible", "obfs_param":""}
+    },
 ```
 注：客户端的protocol和obfs配置必须与服务端的一致，除非服务端配置为兼容插件。
 
