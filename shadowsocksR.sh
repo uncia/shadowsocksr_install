@@ -259,8 +259,6 @@ config_shadowsocks(){
         "${shadowsocksport}":"${shadowsockspwd}",
         "25":"${shadowsockspwd}"
     },
-    "timeout":120,
-    "udp_timeout": 60,
     "method":"aes-256-cfb",
     "protocol":"auth_sha1_v4_compatible",
     "protocol_param":"",
@@ -270,6 +268,8 @@ config_shadowsocks(){
     "speed_limit_per_user": 0,
 
     "additional_ports" : {}, // only works under multi-user mode
+    "timeout":120,
+    "udp_timeout": 60,
     "dns_ipv6":false,
     "connect_verbose_info": 0,
     "redirect":"",
