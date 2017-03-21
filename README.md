@@ -177,6 +177,55 @@ maxmode="1"  （最大传输模式；设为 1 表示开启；设为 0 表示关�
 /serverspeeder/bin/serverSpeeder.sh start
 方便对比测试效果
 ```
+##中转SS，加速Linode上的ss
+一般来说，机房的网络相比民用网络，有更高的QoS级别，出口质量会相对高一些。经朋友推荐，入手了阿里云ECS（云服务器），用其中转原本直接到Linode的流量。经过几番折腾，总结出设置如下（以下均在 Ubuntu 14.04 64-bit 下操作）：
+
+1、开启IP_FORWARD
+```
+vi /etc/sysctl.conf
+#在文件末添加以下一行（如已有则不必添加）
+net.ipv4.ip_forward=1
+```
+2、使用IPTABLES，转发TCP、UDP流量
+```
+iptables -t nat -A PREROUTING -p tcp --dport 12XXX -j DNAT --to-destination 106.186.XX.XX:12XXX
+iptables -t nat -A POSTROUTING -p tcp -d 106.186.XX.XX --dport 12XXX -j SNAT --to-source 139.XX.XX.XX
+iptables -t nat -A PREROUTING -p udp --dport 12XXX -j DNAT --to-destination 106.186.XX.XX:12XXX
+iptables -t nat -A POSTROUTING -p udp -d 106.186.XX.XX --dport 12XXX -j SNAT --to-source 139.XX.XX.XX
+
+其中 106.186.XX.XX:12XXX 是ss服务器的IP与端口，139.XX.XX.XX是阿里云ECS的公网IP。
+```
+Azure.腾讯云：
+Azure在外层有一层NAT，所给虚拟机的IP虽然是公网IP，但是不是绑定在虚拟机网卡上的IP。Azure的防火墙在收到数据包后进行一次NAT，转发给内部虚拟机。出去的数据包也经过一次NAT，之后才进行发送。
+虽然在出咱虚拟机网卡的包的目标地址被正确的修改，指向了SS-vps，但是源地址是该虚拟机的外网IP（Azure叫他：公用虚拟 IP (VIP)地址），这个包在经国Azure的外围防火墙的时候被丢弃，因为认为这个包的源IP不是内部的服务器的。
+```
+iptables -t nat -A PREROUTING -p tcp --dport 8388 -j DNAT --to-destination SS_VPS_IP:8388
+iptables -t nat -A PREROUTING -p udp --dport 8388 -j DNAT --to-destination SS_VPS_IP:8388
+iptables -t nat -A POSTROUTING -p tcp -d SS_VPS_IP --dport 8388 -j SNAT --to-source Azure内部 IP 地址
+iptables -t nat -A POSTROUTING -p udp -d SS_VPS_IP --dport 8388 -j SNAT --to-source Azure内部 IP 地址
+
+iptables -t nat -A PREROUTING -p tcp --dport 233:666 -j DNAT --to-destination SS_VPS_IP
+iptables -t nat -A PREROUTING -p udp --dport 233:666 -j DNAT --to-destination SS_VPS_IP
+iptables -t nat -A POSTROUTING -p tcp -d SS_VPS_IP --dport 233:666 -j SNAT --to-source SS_VPS_IP
+iptables -t nat -A POSTROUTING -p udp -d SS_VPS_IP --dport 233:666 -j SNAT --to-source SS_VPS_IP
+
+iptables -t nat -A PREROUTING -p tcp --dport 233:666 -j DNAT --to-destination 103.75.117.179
+iptables -t nat -A PREROUTING -p udp --dport 233:666 -j DNAT --to-destination 103.75.117.179
+iptables -t nat -A POSTROUTING -p tcp -d 103.75.117.179/32 --dport 233:666 -j SNAT --to-source 117.174.59.81
+iptables -t nat -A POSTROUTING -p udp -d 103.75.117.179/32 --dport 233:666 -j SNAT --to-source 117.174.59.81
+```
+3、保存IPTABLES，重启阿里云ECS
+```
+#这里使用 iptables-persistent 保存iptables配置，也可以使用其他方法保存
+apt-get install iptables-persistent
+netfilter-persistent save
+ 
+reboot
+```
+OK，这时将ss客户端的IP改为阿里云ECS的公网IP，再去连接，ss流量就会通过阿里云中转，从此卡顿不再有（阿里云 ￥40 + ￥0.8/GB，所以钞票也不再有）。
+
+需要注意的是，并非所有机房都支持UDP转发，各个机房网络环境也不同，具体操作过程中需要根据实际情况，找到合适的线路。
+
 ###客户端下载
 https://github.com/shadowsocksr/shadowsocksr-csharp/releases
 
