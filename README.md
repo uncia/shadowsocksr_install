@@ -177,9 +177,53 @@ maxmode="1"  （最大传输模式；设为 1 表示开启；设为 0 表示关�
 /serverspeeder/bin/serverSpeeder.sh start
 方便对比测试效果
 ```
+
+```
+vi /appex/etc/config
+1.	所需要设置的各项参数如下
+2.	acc="1"
+3.	advacc="1"
+4.	advinacc="1"
+5.	maxmode="1"
+6.	initialCwndWan="44"
+7.	l2wQLimit="256 2048"
+8.	w2lQLimit="256 2048"
+9.	shaperEnable="0"
+10.	SmBurstMS="25"
+11.	rsc="1"
+12.	gso="1"
+13.	engineNum="0"
+14.	shortRttMS="60"
+
+详细设置：
+
+initialCwndWan="60"
+平均ping ms÷3=数值
+
+l2wQLimit="256 2048"
+w2lQLimit="256 2048"
+VPS内存	内存MB值	缓存KB值
+256M	256	2048
+512M	512	4096
+1G	1024	8192
+2G	2048	16384
+4G	4096	32768
+
+VPS内存MB×8=缓存数值
+
+SmBurstMS="15"
+平均ping ms÷9=数值
+
+engineNum="0"
+CPU核心 0=1核 1=2核 2=3核 3=4核，你的VPS是多少核心的就按这样以此类推。
+
+shortRttMS="0"
+平均ping ms÷3=数值，最高100，再高也没啥效果了。
+
 中转SS，加速Linode上的ss
 
 一般来说，机房的网络相比民用网络，有更高的QoS级别，出口质量会相对高一些。经朋友推荐，入手了阿里云ECS（云服务器），用其中转原本直接到Linode的流量。经过几番折腾，总结出设置如下（以下均在 Ubuntu 14.04 64-bit 下操作）：
+```
 
 1、开启IP_FORWARD
 ```
