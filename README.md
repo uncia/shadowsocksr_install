@@ -2,6 +2,9 @@
 # 自动安装  ShadowsocksR Server 无日志
 # Auto install ShadowsocksR Server No Log
 
+客户端下载
+https://github.com/shadowsocksr/shadowsocksr-csharp/releases
+
 shadowsocksR.sh
 ===============
 * Description: Auto Install ShadowsocksR Server for CentOS/Redhat/Debian/Ubuntu
@@ -281,6 +284,8 @@ curl myip.ipip.net
 echo -ne "Finish,Please engoy it."
 ```
 
+https://github.com/uncia/serverSpeeder_Install
+
 中转SS，加速Linode上的ss
 
 一般来说，机房的网络相比民用网络，有更高的QoS级别，出口质量会相对高一些。经朋友推荐，入手了阿里云ECS（云服务器），用其中转原本直接到Linode的流量。经过几番折腾，总结出设置如下（以下均在 Ubuntu 14.04 64-bit 下操作）：
@@ -331,8 +336,5 @@ reboot
 OK，这时将ss客户端的IP改为阿里云ECS的公网IP，再去连接，ss流量就会通过阿里云中转，从此卡顿不再有（阿里云 ￥40 + ￥0.8/GB，所以钞票也不再有）。
 
 需要注意的是，并非所有机房都支持UDP转发，各个机房网络环境也不同，具体操作过程中需要根据实际情况，找到合适的线路。
-
-客户端下载
-https://github.com/shadowsocksr/shadowsocksr-csharp/releases
 
 Copyright (C) 2014-2999
