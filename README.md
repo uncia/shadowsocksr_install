@@ -222,15 +222,20 @@ shortRttMS="0"
 ```
 
 Centos7基礎網絡優化
+
 後綴為純粹是為了在編輯器下代碼顯示更好看而設置
+
 以下過程切記不要少回車
+
 連接至服務器，複製以下內容並回車
+
 ```
 yum clean all
 yum install screen -y
 screen -S temp
 ```
 然後複製以下內容並回車
+
 ```
 yum update -y
 yum install epel-release -y
@@ -262,7 +267,9 @@ rpm -ivh https://buildlogs.centos.org/c7.1511.00/kernel/20151119220809/3.10.0-32
 wget -4qO- softs.pw/Bash/Get_Out_Spam.sh|bash
 reboot
 ```
+
 稍等片刻，鏈接後複製以下內容並回車
+
 ```
 wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeser_Install/master/appex.sh && chmod +x appex.sh && bash appex.sh install
 pip install --upgrade pip
@@ -325,7 +332,7 @@ OK，这时将ss客户端的IP改为阿里云ECS的公网IP，再去连接，ss�
 
 需要注意的是，并非所有机房都支持UDP转发，各个机房网络环境也不同，具体操作过程中需要根据实际情况，找到合适的线路。
 
-###客户端下载
+客户端下载
 https://github.com/shadowsocksr/shadowsocksr-csharp/releases
 
 Copyright (C) 2014-2999
