@@ -221,6 +221,59 @@ shortRttMS="0"
 平均ping ms÷3=数值，最高100，再高也没啥效果了。
 ```
 
+Centos7基礎網絡優化
+後綴為純粹是為了在編輯器下代碼顯示更好看而設置
+以下過程切記不要少回車
+連接至服務器，複製以下內容並回車
+```
+yum clean all
+yum install screen -y
+screen -S temp
+```
+然後複製以下內容並回車
+```
+yum update -y
+yum install epel-release -y
+yum install net-tools wget vim unzip zip python-pip iptables -y
+yum -y groupinstall "Development Tools"
+echo "* soft nofile 51200
+* hard nofile 51200" >> /etc/security/limits.conf
+echo "fs.file-max = 51200
+net.core.rmem_max = 67108864
+net.core.wmem_max = 67108864
+net.core.netdev_max_backlog = 250000
+net.core.somaxconn = 4096
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_tw_recycle = 0
+net.ipv4.tcp_fin_timeout = 30
+net.ipv4.tcp_keepalive_time = 1200
+net.ipv4.ip_local_port_range = 10000 65000
+net.ipv4.tcp_max_syn_backlog = 8192
+net.ipv4.tcp_max_tw_buckets = 5000
+net.ipv4.tcp_fastopen = 3
+net.ipv4.tcp_mem = 25600 51200 102400
+net.ipv4.tcp_rmem = 4096 87380 67108864
+net.ipv4.tcp_wmem = 4096 65536 67108864
+net.ipv4.tcp_mtu_probing = 1
+net.ipv4.tcp_congestion_control = hybla" >> /etc/sysctl.conf
+echo "session required pam_limits.so" >> /etc/pam.d/login
+rpm -ivh https://buildlogs.centos.org/c7.1511.00/kernel/20151119220809/3.10.0-327.el7.x86_64/kernel-3.10.0-327.el7.x86_64.rpm --force
+wget -4qO- softs.pw/Bash/Get_Out_Spam.sh|bash
+reboot
+```
+稍等片刻，鏈接後複製以下內容並回車
+```
+wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeser_Install/master/appex.sh && chmod +x appex.sh && bash appex.sh install
+pip install --upgrade pip
+pip install speedtest-cli
+speedtest-cli
+cd
+rm -rf *
+curl myip.ipip.net
+echo -ne "Finish,Please engoy it."
+```
+
 中转SS，加速Linode上的ss
 
 一般来说，机房的网络相比民用网络，有更高的QoS级别，出口质量会相对高一些。经朋友推荐，入手了阿里云ECS（云服务器），用其中转原本直接到Linode的流量。经过几番折腾，总结出设置如下（以下均在 Ubuntu 14.04 64-bit 下操作）：
