@@ -8,7 +8,7 @@ https://github.com/shadowsocksr/shadowsocksr-csharp/releases
 shadowsocksR.sh
 ===============
 * Description: Auto Install ShadowsocksR Server for CentOS/Redhat/Debian/Ubuntu
-* Intro: https://shadowsocks.be/9.html
+* Intro: https://shadowsocks.be/9.html & https://teddysun.com/489.html
 
 使用方法：
 使用root用户登录，运行以下命令：
@@ -345,6 +345,7 @@ wget -4qO- softs.pw/Bash/Get_Out_Spam.sh|bash
 ```
 wget -4qO- raw.githubusercontent.com/ToyoDAdoubi/doubi/master/Get_Out_Spam.sh|bash
 ```
+
 Linux中利用 iptables string模块 屏蔽泛域名(匹配字符串)
 
 一般 iptables 自带的都有 string 模块，这个模块的作用就是匹配字符串，匹配到泛域名的URL，然后就把数据包丢弃，就实现了屏蔽泛域名的功能。
@@ -352,13 +353,13 @@ Linux中利用 iptables string模块 屏蔽泛域名(匹配字符串)
 示例：
 
 以下规则是屏蔽以 youtube.com 为主的所有一级 二级 三级等域名。
-`
+```
 iptables -I OUTPUT -m string --string "youtube.com" --algo bm --to 65535 -j DROP
 # 添加屏蔽规则
  
 iptables -D OUTPUT -m string --string "youtube.com" --algo bm --to 65535 -j DROP
 # 删除屏蔽规则，上面添加的代码是什么样，那么删除的代码就是把 -I 改成 -D 
-`
+```
 解释：
 
 -I 是插入iptables规则；
