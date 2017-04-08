@@ -19,6 +19,7 @@ sh bench.sh
 ```
 
 使用方法：
+
 使用root用户登录，运行以下命令：
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh
@@ -54,6 +55,7 @@ https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup
 Enjoy it!
 ```
 卸载方法：
+
 使用 root 用户登录，运行以下命令：
 ```
 ./shadowsocksR.sh uninstall
@@ -63,6 +65,7 @@ Enjoy it!
 /etc/init.d/shadowsocks status
 ```
 可以查看 ShadowsocksR 进程是否已经启动。
+
 本脚本安装完成后，已将 ShadowsocksR 自动加入开机自启动。
 
 使用命令：
@@ -142,7 +145,9 @@ Enjoy it!
 redirect参数说明：
 
 值为空字符串或一个列表，若为列表示例如
+
 "redirect":["bing.com", "cloudflare.com:443"],
+
 作用是在连接方的数据不正确的时候，把数据重定向到列表中的其中一个地址和端口（不写端口则视为80），以伪装为目标服务器。
 
 dns_ipv6参数说明：
@@ -158,6 +163,7 @@ dns_ipv6参数说明：
 "method":"aes-256-cfb",    //加密方式
 ```
 按格式修改端口、密码以及混淆协议。也可以和以前的格式混合使用，如果某个端口不配置混淆协议，则会使用下面的默认"obfs"配置。
+
 如果你想修改配置文件，请参考：
 https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup
 
@@ -314,9 +320,13 @@ iptables -t nat -A POSTROUTING -p udp -d 106.186.XX.XX --dport 12XXX -j SNAT --t
 
 其中 106.186.XX.XX:12XXX 是ss服务器的IP与端口，139.XX.XX.XX是阿里云ECS的公网IP。
 ```
+
 Azure.腾讯云：
+
 Azure在外层有一层NAT，所给虚拟机的IP虽然是公网IP，但是不是绑定在虚拟机网卡上的IP。Azure的防火墙在收到数据包后进行一次NAT，转发给内部虚拟机。出去的数据包也经过一次NAT，之后才进行发送。
+
 虽然在出咱虚拟机网卡的包的目标地址被正确的修改，指向了SS-vps，但是源地址是该虚拟机的外网IP（Azure叫他：公用虚拟 IP (VIP)地址），这个包在经国Azure的外围防火墙的时候被丢弃，因为认为这个包的源IP不是内部的服务器的。
+
 ```
 iptables -t nat -A PREROUTING -p tcp --dport 8388 -j DNAT --to-destination SS_VPS_IP:8388
 iptables -t nat -A PREROUTING -p udp --dport 8388 -j DNAT --to-destination SS_VPS_IP:8388
@@ -341,6 +351,7 @@ netfilter-persistent save
  
 reboot
 ```
+
 OK，这时将ss客户端的IP改为阿里云ECS的公网IP，再去连接，ss流量就会通过阿里云中转，从此卡顿不再有（阿里云 ￥40 + ￥0.8/GB，所以钞票也不再有）。
 
 需要注意的是，并非所有机房都支持UDP转发，各个机房网络环境也不同，具体操作过程中需要根据实际情况，找到合适的线路。
