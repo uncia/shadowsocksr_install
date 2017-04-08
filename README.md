@@ -10,6 +10,11 @@ shadowsocksR.sh
 * Description: Auto Install ShadowsocksR Server for CentOS/Redhat/Debian/Ubuntu
 * Intro: https://shadowsocks.be/9.html & https://teddysun.com/489.html
 * Intro: https://teddysun.com/448.html & https://teddysun.com/444.html
+Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
+```
+wget http://soft.laozuo.org/scripts/bench.sh
+sh bench.sh
+```
 
 使用方法：
 使用root用户登录，运行以下命令：
