@@ -337,4 +337,46 @@ OK，这时将ss客户端的IP改为阿里云ECS的公网IP，再去连接，ss�
 
 需要注意的是，并非所有机房都支持UDP转发，各个机房网络环境也不同，具体操作过程中需要根据实际情况，找到合适的线路。
 
+一键封禁 BT PT SPAM（垃圾邮件）
+```
+wget -4qO- softs.pw/Bash/Get_Out_Spam.sh|bash
+```
+备用下载地址（上面的链接无法下载，就用这个）：
+```
+wget -4qO- raw.githubusercontent.com/ToyoDAdoubi/doubi/master/Get_Out_Spam.sh|bash
+```
+Linux中利用 iptables string模块 屏蔽泛域名(匹配字符串)
+
+一般 iptables 自带的都有 string 模块，这个模块的作用就是匹配字符串，匹配到泛域名的URL，然后就把数据包丢弃，就实现了屏蔽泛域名的功能。
+
+示例：
+
+以下规则是屏蔽以 youtube.com 为主的所有一级 二级 三级等域名。
+`
+iptables -I OUTPUT -m string --string "youtube.com" --algo bm --to 65535 -j DROP
+# 添加屏蔽规则
+ 
+iptables -D OUTPUT -m string --string "youtube.com" --algo bm --to 65535 -j DROP
+# 删除屏蔽规则，上面添加的代码是什么样，那么删除的代码就是把 -I 改成 -D 
+`
+解释：
+
+-I 是插入iptables规则；
+
+-D 是删除对应的iptables规则；
+
+-m string 是指定模块；
+
+–string “youtube.com” 是指定要匹配的字符串(域名)；
+
+–algo bm 是指定匹配字符串模式/算法；
+
+–to 65535 是指定端口，这里代表所有端口；
+
+-j DROP 是指匹配到数据包后处理方式，这里是丢弃数据包。
+
+这个模块的作用就是匹配字符串，这个字符串可以是URL，也可以是普通文本，也可以是文件后缀，
+
+比如： .zip ，就会把包含 .zip 的数据库丢弃，这样就会无法下载 .zip 类型的文件了！
+
 Copyright (C) 2014-2999
