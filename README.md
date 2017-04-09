@@ -310,7 +310,7 @@ https://github.com/uncia/serverSpeeder_Install
 ```
 vi /etc/sysctl.conf
 #在文件末添加以下一行（如已有则不必添加）
-net.ipv4.ip_forward=1
+net.ipv4.ip_forward = 1
 ```
 2、使用IPTABLES，转发TCP、UDP流量
 ```
