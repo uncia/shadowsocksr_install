@@ -4,7 +4,7 @@ net-speeder的安装
 =================
 安装net-speeder（CentOS6 64bit）
 ```
-wget --no-check-certificate https://gist.github.com/LazyZhu/dc3f2f84c336a08fd6a5/raw/d8aa4bcf955409e28a262ccf52921a65fe49da99/net_speeder_lazyinstall.sh
+wget --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/net_speeder_lazyinstall.sh
 sh net_speeder_lazyinstall.sh
 nohup /usr/local/net_speeder/net_speeder venet0 "ip" >/dev/null 2>&1 &
 
