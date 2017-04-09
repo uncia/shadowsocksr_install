@@ -12,9 +12,12 @@ echo 'nohup /usr/local/net_speeder/net_speeder venet0 "ip" >/dev/null 2>&1 & ' >
 ```
 
 安装net-speeder （Debian/Ubuntu）
+
+```
 wget --no-check-certificate https://raw.githubusercontent.com/tennfy/debian_netspeeder_tennfy/master/debian_netspeeder_tennfy.sh
 chmod a+x debian_netspeeder_tennfy.sh
 bash debian_netspeeder_tennfy.sh
+```
 
 查看net-speeder是否运行
 
