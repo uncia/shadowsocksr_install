@@ -260,6 +260,7 @@ yum install net-tools wget vim unzip zip python-pip iptables -y
 yum -y groupinstall "Development Tools"
 echo "* soft nofile 51200
 * hard nofile 51200" >> /etc/security/limits.conf
+echo "ulimit -SHn 51200" >> /etc/profile
 echo "fs.file-max = 51200
 net.core.rmem_max = 67108864
 net.core.wmem_max = 67108864
