@@ -169,7 +169,18 @@ https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup
 
 参考链接：
 https://github.com/breakwa11/shadowsocks-rss/wiki/ulimit
-##锐速优化
+
+Ubuntu 优化
+
+```
+echo "* soft nofile 512000
+* hard nofile 1024000" >> /etc/security/limits.conf
+echo "ulimit -SHn 1024000" >> /etc/profile
+echo "fs.file-max = 1024000" >> /etc/sysctl.conf
+echo "session required pam_limits.so" >> /etc/pam.d/login
+```
+
+锐速优化
 ```
 vi /serverspeeder/etc/config
 把rsc="0"改成rsc="1"，切换新网卡驱动
