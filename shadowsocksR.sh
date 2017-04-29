@@ -259,7 +259,7 @@ config_shadowsocks(){
         "${shadowsocksport}":"${shadowsockspwd}",
         "25":"${shadowsockspwd}"
     },
-    "method":"aes-256-cfb",
+    "method":"chacha20-ietf",
     "protocol":"auth_sha1_v4_compatible",
     "protocol_param":"",
     "obfs":"tls1.2_ticket_auth_compatible",
@@ -268,12 +268,14 @@ config_shadowsocks(){
     "speed_limit_per_user": 0,
 
     "additional_ports" : {}, // only works under multi-user mode
+    "additional_ports_only" : false, // only works under multi-user mode
     "timeout":120,
     "udp_timeout": 60,
     "dns_ipv6":false,
     "connect_verbose_info": 0,
     "redirect":"",
     "fast_open":false
+    "workers": 1
 }
 EOF
 }
