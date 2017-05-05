@@ -274,7 +274,7 @@ config_shadowsocks(){
     "dns_ipv6":false,
     "connect_verbose_info": 0,
     "redirect":"",
-    "fast_open":false
+    "fast_open":false,
     "workers": 1
 }
 EOF
