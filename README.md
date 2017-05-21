@@ -84,6 +84,12 @@ Enjoy it!
 
 如果要多个用户一起使用的话，请写入以下配置：
 ```
+    "port_password":{
+        "${shadowsocksport}":"${shadowsockspwd}",
+        "25":"${shadowsockspwd}"
+    },
+```
+```
 {
     "server":"0.0.0.0",
     "server_ipv6": "[::]",
