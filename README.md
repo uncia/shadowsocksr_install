@@ -22,20 +22,20 @@ sh bench.sh
 
 使用root用户登录，运行以下命令：
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh
-chmod +x shadowsocksR.sh
-./shadowsocksR.sh 2>&1 | tee shadowsocksR.log
+wget -N --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh && bash shadowsocksR.sh
 ```
 或者
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh
 chmod +x shadowsocksR.sh
-./shadowsocksR.sh
-rm -rf shadowsocksR.sh
+./shadowsocksR.sh 2>&1 | tee shadowsocksR.log
 ```
 再或者
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh && bash shadowsocksR.sh
+wget --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh
+chmod +x shadowsocksR.sh
+./shadowsocksR.sh
+rm -rf shadowsocksR.sh
 ```
 安装完成后，脚本提示如下：
 ```
