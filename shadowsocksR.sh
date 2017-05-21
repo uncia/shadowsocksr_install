@@ -185,7 +185,7 @@ pre_install(){
 # Download files
 download_files(){
     # Download libsodium file
-    if ! wget --no-check-certificate -O libsodium-1.0.11.tar.gz https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/libsodium-1.0.11.tar.gz; then
+    if ! wget --no-check-certificate -O libsodium-1.0.12.tar.gz https://github.com/jedisct1/libsodium/releases/download/1.0.12/libsodium-1.0.12.tar.gz; then
         echo "Failed to download libsodium-1.0.11.tar.gz!"
         exit 1
     fi
