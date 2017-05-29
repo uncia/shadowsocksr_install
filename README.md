@@ -23,6 +23,7 @@ sh bench.sh
 使用root用户登录，运行以下命令：
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh && bash shadowsocksR.sh
+rm -rf shadowsocksR.sh
 ```
 或者
 ```
