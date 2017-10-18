@@ -15,7 +15,7 @@ echo "#############################################################"
 echo "# One click Install ShadowsocksR Server                     #"
 echo "# Intro: https://github.com/uncia/shadowsocksr_install      #"
 echo "# Author: Uncia                                             #"
-echo "# Github: https://github.com/shadowsocksrr/shadowsocksr/    #"
+echo "# Github: https://github.com/shadowsocksrr/                 #"
 echo "#############################################################"
 echo
 
