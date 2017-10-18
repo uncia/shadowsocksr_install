@@ -413,7 +413,7 @@ install(){
     # Install ShadowsocksR
     cd ${cur_dir}
     unzip -q manyuser.zip
-    mv shadowsocksr-manyuser/shadowsocks /usr/local/
+    mv shadowsocksr-akkariiin-master/shadowsocks /usr/local/
     if [ -f /usr/local/shadowsocks/server.py ]; then
         chmod +x /etc/init.d/shadowsocks
         if check_sys packageManager yum; then
