@@ -3,7 +3,7 @@
 # Auto install ShadowsocksR Server No Log
 
 客户端下载
-https://github.com/shadowsocksr/shadowsocksr-csharp/releases
+https://github.com/shadowsocksrr/shadowsocksr-csharp/releases
 
 shadowsocksR.sh
 ===============
