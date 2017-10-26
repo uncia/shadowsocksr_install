@@ -5,6 +5,9 @@
 客户端下载
 https://github.com/shadowsocksrr/shadowsocksr-csharp/releases
 
+全局代理端
+https://www.sockscap64.com/sstap/
+
 shadowsocksR.sh
 ===============
 * Description: Auto Install ShadowsocksR Server for CentOS/Redhat/Debian/Ubuntu
