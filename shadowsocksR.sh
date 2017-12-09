@@ -308,7 +308,7 @@ pre_install(){
     if check_sys packageManager yum; then
         yum install -y python python-devel python-setuptools openssl openssl-devel curl wget unzip gcc automake autoconf make libtool
     elif check_sys packageManager apt; then
-        apt-get -y update
+        apt-get -y -o Acquire::ForceIPv4=true update
         apt-get -y install python python-dev python-setuptools openssl libssl-dev curl wget unzip gcc automake autoconf make libtool
     fi
     cd ${cur_dir}
