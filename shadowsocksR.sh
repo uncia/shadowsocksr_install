@@ -38,6 +38,9 @@ aes-192-ctr
 aes-128-ctr
 chacha20-ietf
 chacha20
+salsa20
+xchacha20
+xsalsa20
 rc4-md5
 rc4-md5-6
 )
@@ -54,6 +57,10 @@ auth_aes128_md5
 auth_aes128_sha1
 auth_chain_a
 auth_chain_b
+auth_chain_c
+auth_chain_d
+auth_chain_e
+auth_chain_f
 )
 # obfs
 obfs=(
@@ -322,7 +329,7 @@ download_files(){
         exit 1
     fi
     # Download ShadowsocksR file
-    if ! wget --no-check-certificate -O manyuser.zip https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/master.zip; then
+    if ! wget --no-check-certificate -O shadowsocksr-akkariiin-dev.tar.gz https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/dev.zip; then
         echo -e "[${red}Error${plain}] Failed to download ShadowsocksR file!"
         exit 1
     fi
@@ -415,8 +422,8 @@ install(){
     ldconfig
     # Install ShadowsocksR
     cd ${cur_dir}
-    unzip -q manyuser.zip
-    mv shadowsocksr-akkariiin-master/shadowsocks /usr/local/
+    unzip -q shadowsocksr-akkariiin-dev.zip
+    mv shadowsocksr-akkariiin-dev/shadowsocks /usr/local/
     if [ -f /usr/local/shadowsocks/server.py ]; then
         chmod +x /etc/init.d/shadowsocks
         if check_sys packageManager yum; then
@@ -450,7 +457,7 @@ install(){
 # Install cleanup
 install_cleanup(){
     cd ${cur_dir}
-    rm -rf manyuser.zip shadowsocksr-akkariiin-master ${libsodium_file}.tar.gz ${libsodium_file}
+    rm -rf shadowsocksr-akkariiin-dev.zip shadowsocksr-akkariiin-dev ${libsodium_file}.tar.gz ${libsodium_file}
 }
 
 
