@@ -329,7 +329,7 @@ download_files(){
         exit 1
     fi
     # Download ShadowsocksR file
-    if ! wget --no-check-certificate -O shadowsocksr-akkariiin-dev.tar.gz https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/dev.zip; then
+    if ! wget --no-check-certificate -O shadowsocksr-akkariiin-dev.zip https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/dev.zip; then
         echo -e "[${red}Error${plain}] Failed to download ShadowsocksR file!"
         exit 1
     fi
