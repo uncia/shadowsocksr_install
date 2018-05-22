@@ -329,7 +329,7 @@ download_files(){
         exit 1
     fi
     # Download ShadowsocksR file
-    if ! wget --no-check-certificate -O shadowsocksr-akkariiin-dev.zip https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/dev.zip; then
+    if ! wget --no-check-certificate -O shadowsocksr-akkariiin-master.zip https://codeload.github.com/shadowsocksrr/shadowsocksr/zip/akkariiin/master; then
         echo -e "[${red}Error${plain}] Failed to download ShadowsocksR file!"
         exit 1
     fi
@@ -422,8 +422,8 @@ install(){
     ldconfig
     # Install ShadowsocksR
     cd ${cur_dir}
-    unzip -q shadowsocksr-akkariiin-dev.zip
-    mv shadowsocksr-akkariiin-dev/shadowsocks /usr/local/
+    unzip -q shadowsocksr-akkariiin-master.zip
+    mv shadowsocksr-akkariiin-master/shadowsocks /usr/local/
     if [ -f /usr/local/shadowsocks/server.py ]; then
         chmod +x /etc/init.d/shadowsocks
         if check_sys packageManager yum; then
@@ -457,7 +457,7 @@ install(){
 # Install cleanup
 install_cleanup(){
     cd ${cur_dir}
-    rm -rf shadowsocksr-akkariiin-dev.zip shadowsocksr-akkariiin-dev ${libsodium_file}.tar.gz ${libsodium_file}
+    rm -rf shadowsocksr-akkariiin-master.zip shadowsocksr-akkariiin-master ${libsodium_file}.tar.gz ${libsodium_file}
 }
 
 
