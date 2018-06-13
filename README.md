@@ -11,10 +11,32 @@ https://www.sockscap64.com/sstap/
 shadowsocksR.sh
 ===============
 * Description: Auto Install ShadowsocksR Server for CentOS/Redhat/Debian/Ubuntu
-* Intro: https://shadowsocks.be/9.html & https://teddysun.com/489.html
-* Intro: https://teddysun.com/448.html & https://teddysun.com/444.html
+* Intro: https://shadowsocks.be/9.html & https://teddysun.com/489.html BBR
+* Intro: https://teddysun.com/448.html & https://teddysun.com/444.html 
+* Intro: https://github.com/fatedier/frp
 
 Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
+
+使用方法：
+```
+命令1:
+wget -qO- bench.sh | bash
+或者
+
+curl -Lso- bench.sh | bash
+
+命令2:
+
+wget -qO- 86.re/bench.sh | bash
+或者
+
+curl -so- 86.re/bench.sh | bash
+```
+```
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh
+chmod +x unixbench.sh
+./unixbench.sh
+```
 
 ```
 wget http://soft.laozuo.org/scripts/bench.sh
