@@ -45,6 +45,10 @@ sh bench.sh
 
 使用方法：
 
+清理查找清理旧版本
+```
+find / -name 'shadowsocks*'
+```
 使用root用户登录，运行以下命令：
 ```
 yum install -y wget && 
