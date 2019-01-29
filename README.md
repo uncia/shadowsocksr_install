@@ -43,12 +43,18 @@ wget http://soft.laozuo.org/scripts/bench.sh
 sh bench.sh
 ```
 
-使用方法：
+###使用方法：
 
-清理查找清理旧版本
+
+清理查找清理旧版本与添加开放端口
 ```
 find / -name 'shadowsocks*'
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8080 -j ACCEPT
+/etc/init.d/iptables save
+/etc/init.d/iptables restart
 ```
+
 使用root用户登录，运行以下命令：
 ```
 yum install -y wget && 
