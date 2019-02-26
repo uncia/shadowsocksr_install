@@ -49,6 +49,8 @@ sh bench.sh
 清理查找清理旧版本与添加开放端口
 ```
 find / -name 'shadowsocks*'
+iptables -L -n  --line-number
+iptables -D INPUT 1
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8080 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 4434 -j ACCEPT
