@@ -11,7 +11,8 @@ https://www.sockscap64.com/sstap/
 shadowsocksR.sh
 ===============
 * Description: Auto Install ShadowsocksR Server for CentOS/Redhat/Debian/Ubuntu
-* Intro: https://shadowsocks.be/9.html & https://teddysun.com/489.html BBR
+* Intro: https://shadowsocks.be/9.html
+* Intro: https://github.com/tcp-nanqinlang/wiki/wiki/general & https://teddysun.com/489.html BBR
 * Intro: https://teddysun.com/448.html & https://teddysun.com/444.html 
 * Intro: https://github.com/fatedier/frp
 
