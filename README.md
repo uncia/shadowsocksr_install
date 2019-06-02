@@ -68,6 +68,9 @@ yum install -y wget &&
 wget -N --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh && bash shadowsocksR.sh
 rm -rf shadowsocksR.sh
 ```
+```
+yum install -y wget && wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz && tar zxf lnmp1.6.tar.gz && cd lnmp1.6 && ./install.sh lnmp
+```
 或者
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh
