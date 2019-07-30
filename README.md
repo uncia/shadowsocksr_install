@@ -444,6 +444,12 @@ netfilter-persistent save
 reboot
 ```
 
+```
+iptables -t nat -A PREROUTING -d 192.168.43.176 -p tcp --dport 80 -j DNAT --to-destination 192.168.0.1:80
+
+iptables -t nat -A POSTROUTING -d 192.168.0.1 -p tcp --dport 80 -j SNAT --to-source 192.168.43.176
+透过这样的方式 ,其他的HOST或VM 就可以直接访问 ubuntu的 
+```
 OK，这时将ss客户端的IP改为阿里云ECS的公网IP，再去连接，ss流量就会通过阿里云中转，从此卡顿不再有（阿里云 ￥40 + ￥0.8/GB，所以钞票也不再有）。
 
 需要注意的是，并非所有机房都支持UDP转发，各个机房网络环境也不同，具体操作过程中需要根据实际情况，找到合适的线路。
