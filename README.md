@@ -62,6 +62,29 @@ iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8443 -j ACCEPT
 /etc/init.d/iptables restart
 ```
 
+停止防火墙
+```
+#停止firewall
+systemctl stop firewalld.service
+ 
+#禁止firewall开机启动
+systemctl disable firewalld.service
+ 
+#关闭iptables
+service iptables stop
+ 
+#去掉iptables开机启动
+chkconfig iptables off
+其他操作系统可以搜索一下！！
+
+#或者开放所有端口
+
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+sudo iptables -F
+```
+
 使用root用户登录，运行以下命令：
 ```
 yum install -y wget && 
