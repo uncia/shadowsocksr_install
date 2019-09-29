@@ -99,6 +99,7 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 
 ```
 bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a -firmware
+全自动安装默认root密码:MoeClub.org
 
 bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh')
 ```
