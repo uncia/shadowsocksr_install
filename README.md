@@ -87,7 +87,16 @@ sudo iptables -P OUTPUT ACCEPT
 sudo iptables -F
 ```
 
-debian9
+debian9+TCP加速
+
+Ubuntu系统目前是可以直接安装BBR加速的！
+
+CentOS系统需要以下操作
+1. 切换成 root
+2. 重新生成 grub2.cfg， 命令如下：
+grub2-mkconfig -o /boot/grub2/grub.cfg
+3. 跑你要跑的 bbr.sh
+
 ```
 bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a -firmware
 
