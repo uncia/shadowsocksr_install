@@ -15,6 +15,7 @@ shadowsocksR.sh
 * Intro: https://github.com/tcp-nanqinlang/wiki/wiki/general & https://teddysun.com/489.html BBR
 * Intro: https://teddysun.com/448.html & https://teddysun.com/444.html 
 * Intro: https://github.com/fatedier/frp
+* Intro: https://github.com/chiakge/Linux-NetSpeed
 
 Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
 
