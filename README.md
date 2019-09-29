@@ -90,6 +90,8 @@ sudo iptables -F
 debian9
 ```
 bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a -firmware
+
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh')
 ```
 
 使用root用户登录，运行以下命令：
