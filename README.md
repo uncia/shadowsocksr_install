@@ -107,6 +107,8 @@ bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/chiak
 使用root用户登录，运行以下命令：
 ```
 bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh')
+
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh') uninstall
 ```
 
 ```
