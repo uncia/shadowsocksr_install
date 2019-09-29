@@ -87,12 +87,22 @@ sudo iptables -P OUTPUT ACCEPT
 sudo iptables -F
 ```
 
+debian9
+```
+bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a -firmware
+```
+
 使用root用户登录，运行以下命令：
+```
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh')
+```
+
 ```
 yum install -y wget && 
 wget -N --no-check-certificate https://raw.githubusercontent.com/uncia/shadowsocksr_install/master/shadowsocksR.sh && bash shadowsocksR.sh
 rm -rf shadowsocksR.sh
 ```
+
 ```
 yum install -y wget && wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz && tar zxf lnmp1.6.tar.gz && cd lnmp1.6 && ./install.sh lnmp
 ```
