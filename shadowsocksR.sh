@@ -259,8 +259,8 @@ pre_install(){
         hint="${protocols[$i-1]}"
         echo -e "${green}${i}${plain}) ${hint}"
     done
-    read -p "Which protocol you'd select(Default: ${protocols[0]}):" protocol
-    [ -z "$protocol" ] && protocol=2
+    read -p "Which protocol you'd select(Default: ${protocols[5]}):" protocol
+    [ -z "$protocol" ] && protocol=1
     expr ${protocol} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Input error, please input a number"
