@@ -268,10 +268,10 @@ dns_ipv6参数说明：
 按格式修改端口、密码以及混淆协议。也可以和以前的格式混合使用，如果某个端口不配置混淆协议，则会使用下面的默认"obfs"配置。
 
 如果你想修改配置文件，请参考：
-https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup
+https://github.com/shadowsocksrr/shadowsocks-rss/wiki/Server-Setup
 
 参考链接：
-https://github.com/breakwa11/shadowsocks-rss/wiki/ulimit
+https://github.com/shadowsocksrr/shadowsocks-rss/wiki/ulimit
 
 Ubuntu 优化
 
