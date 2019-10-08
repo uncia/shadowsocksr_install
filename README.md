@@ -18,6 +18,7 @@ shadowsocksR.sh
 * Intro: https://github.com/chiakge/Linux-NetSpeed
 * Intro: https://github.com/chiakge/installNET
 * Intro: https://github.com/MvsCode/frp-onekey
+* Intro: https://github.com/mili-tan/AuroraDNS.GUI
 
 Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
 
