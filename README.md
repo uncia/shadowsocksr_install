@@ -123,6 +123,7 @@ rm -rf shadowsocksR.sh
 
 ```
 yum install -y wget && wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz && tar zxf lnmp1.6.tar.gz && cd lnmp1.6 && ./install.sh lnmp
+ln -s /home/wwwroot/ /root/
 ```
 或者
 ```
