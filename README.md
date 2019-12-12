@@ -17,7 +17,7 @@ shadowsocksR.sh
 * Intro: https://github.com/fatedier/frp
 * Intro: https://github.com/chiakge/Linux-NetSpeed
 * Intro: https://github.com/chiakge/installNET
-* Intro: https://github.com/MvsCode/frp-onekey
+* Intro: https://github.com/MvsCode/frps-onekey
 * Intro: https://github.com/mili-tan/AuroraDNS.GUI
 * Intro: https://github.com/shawn1m/overture
 
