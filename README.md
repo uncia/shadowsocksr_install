@@ -8,7 +8,6 @@ https://github.com/shadowsocksrr/shadowsocksr-csharp/releases
 全局代理端
 https://www.sockscap64.com/sstap/
 
-shadowsocksR.sh
 ===============
 * Description: Auto Install ShadowsocksR Server for CentOS/Redhat/Debian/Ubuntu
 * Intro: https://github.com/tcp-nanqinlang/wiki/wiki/general & https://teddysun.com/489.html BBR
@@ -16,6 +15,7 @@ shadowsocksR.sh
 * Intro: https://github.com/fatedier/frp
 * Intro: https://github.com/chiakge/Linux-NetSpeed
 * Intro: https://github.com/chiakge/installNET
+* Intro: https://github.com/chiakge/iptablesUtils
 * Intro: https://github.com/MvsCode/frps-onekey
 * Intro: https://github.com/mili-tan/AuroraDNS.GUI
 * Intro: https://github.com/shawn1m/overture
