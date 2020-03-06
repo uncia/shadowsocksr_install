@@ -20,6 +20,7 @@ https://www.sockscap64.com/sstap/
 * Intro: https://github.com/mili-tan/AuroraDNS.GUI
 * Intro: https://github.com/shawn1m/overture
 * Intro: https://github.com/trojan-gfw/trojan
+* Intro: https://github.com/NetchX/Netch
 * Intro: https://github.com/coolsnowwolf/lede
 
 Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
