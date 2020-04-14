@@ -26,6 +26,8 @@ https://www.sockscap64.com/sstap/
 * Intro: https://sub-web.netlify.com/
 * Intro: https://github.com/Fndroid/clash_for_windows_pkg
 * Intro: https://github.com/coolsnowwolf/lede
+* Intro: https://github.com/pcysanji/ssr4p/blob/master/user.rule
+* Intro: https://github.com/Tsuk1ko/SS-Collection/blob/master/SSR/chn_ip.txt
 
 Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
 
