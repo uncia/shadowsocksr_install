@@ -21,6 +21,10 @@ https://www.sockscap64.com/sstap/
 * Intro: https://github.com/shawn1m/overture
 * Intro: https://github.com/trojan-gfw/trojan
 * Intro: https://github.com/NetchX/Netch
+* Intro: https://getoutline.org/zh-CN/home
+* Intro: https://github.com/nameless3721/clashr/releases
+* Intro: https://api.nameless13.com/
+* Intro: https://github.com/Fndroid/clash_for_windows_pkg
 * Intro: https://github.com/coolsnowwolf/lede
 
 Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
