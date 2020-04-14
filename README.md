@@ -23,7 +23,7 @@ https://www.sockscap64.com/sstap/
 * Intro: https://github.com/NetchX/Netch
 * Intro: https://getoutline.org/zh-CN/home
 * Intro: https://github.com/nameless3721/clashr/releases
-* Intro: https://api.nameless13.com/
+* Intro: https://sub-web.netlify.com/
 * Intro: https://github.com/Fndroid/clash_for_windows_pkg
 * Intro: https://github.com/coolsnowwolf/lede
 
