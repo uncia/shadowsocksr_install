@@ -5,6 +5,10 @@
 客户端下载
 https://github.com/shadowsocksrr/shadowsocksr-csharp/releases
 
+https://github.com/TheCGDF/SSD-Windows
+
+https://github.com/shadowsocks/shadowsocks-windows/releases
+
 全局代理端
 https://www.sockscap64.com/sstap/
 
