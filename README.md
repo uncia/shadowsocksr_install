@@ -35,6 +35,12 @@ https://www.sockscap64.com/sstap/
 
 Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
 
+https://www.vpser.net/manage/screen.html:
+```
+yum install screen 或 apt-get install screen
+screen -S test
+```
+
 使用方法：
 ```
 命令1:
