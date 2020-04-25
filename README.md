@@ -11,7 +11,7 @@ https://github.com/shadowsocks/shadowsocks-windows/releases
 
 全局代理端
 https://www.sockscap64.com/sstap/
-
+https://github.com/FQrabbit/SSTap-Rule
 ===============
 * Description: Auto Install ShadowsocksR Server for CentOS/Redhat/Debian/Ubuntu
 * Intro: https://github.com/tcp-nanqinlang/wiki/wiki/general & https://teddysun.com/489.html BBR
