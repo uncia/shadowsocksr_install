@@ -40,6 +40,8 @@ https://www.vpser.net/manage/screen.html:
 ```
 yum install screen 或 apt-get install screen
 screen -S test
+
+yum install net-tools 或 apt-get install net-tools
 ```
 
 使用方法：
