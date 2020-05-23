@@ -44,6 +44,9 @@ yum install screen 或 apt-get install screen
 screen -S test
 
 yum install net-tools 或 apt-get install net-tools
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+
+wget --no-check-certificate https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh && chmod +x tcp.sh && ./tcp.sh
 ```
 
 使用方法：
