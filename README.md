@@ -3,6 +3,9 @@
 # Auto install ShadowsocksR Server No Log
 
 客户端下载
+
+https://ci.appveyor.com/project/Akkariiin/shadowsocksr-csharp
+
 https://github.com/shadowsocksrr/shadowsocksr-csharp/releases
 
 https://github.com/TheCGDF/SSD-Windows
