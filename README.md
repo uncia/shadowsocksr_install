@@ -39,6 +39,7 @@ Net4.8:https://support.microsoft.com/zh-cn/help/4497410/
 * Intro: https://github.com/Tsuk1ko/SS-Collection/blob/master/SSR/chn_ip.txt
 * Intro: https://github.com/rkzrdm/TrojanWin/releases
 * Intro: https://getoutline.org/
+* Intro: https://github.com/p4gefau1t/trojan-go/releases
 
 Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
 
