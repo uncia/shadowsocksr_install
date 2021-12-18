@@ -41,6 +41,7 @@ Net4.8:https://support.microsoft.com/zh-cn/help/4497410/
 * Intro: https://github.com/rkzrdm/TrojanWin/releases
 * Intro: https://getoutline.org/
 * Intro: https://github.com/p4gefau1t/trojan-go/releases
+* Intro: https://github.com/paniy/Xray_bash_onekey
 
 Linux VPS/服务器一键检测硬件配置、节点下载和IO读写脚本
 
