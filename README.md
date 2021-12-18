@@ -3,6 +3,7 @@
 # Auto install ShadowsocksR Server No Log
 
 客户端下载
+https://github.com/vaxilu/x-ui/releases
 
 https://ci.appveyor.com/project/Akkariiin/shadowsocksr-csharp
 
